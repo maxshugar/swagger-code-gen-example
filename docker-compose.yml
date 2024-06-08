@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  swagger_codegen_server:
+    image: swaggerapi/swagger-codegen-cli
+    volumes:
+      - ./spec:/local
+    command: >
+      generate -i /local/spec.yaml
+              -l nodejs-server
+              -o /local/output-server
+
+  swagger_codegen_client:
+    image: swaggerapi/swagger-codegen-cli
+    volumes:
+      - ./spec:/local
+    command: >
+      generate -i /local/spec.yaml
+              -l typescript-fetch
+              -o /local/output-client
