@@ -15,5 +15,8 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"description": ""
+	"description": "",
+	"dependencies": {
+		"portable-fetch": "^3.0.0"
+	}
 }
